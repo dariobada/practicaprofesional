@@ -8,13 +8,13 @@
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	//-------------- ACA HARDCODEO EL ID DE USUARIO ----------------
-	$_POST['usuario'] = 'pepe';
+	$_POST['usuario'] = 1;
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-	$cons = "'" . $_POST['consulta'] . "'";
+	//$cons = "'" . $_POST['consulta'] . "'";
 
-	$parte1 = 'SELECT * FROM public."CUENTAS_USUARIOS" WHERE "id_usuario" = ';
+	$parte1 = 'SELECT * FROM public."CUENTAS_USUARIOS" WHERE "id_usuario" = 1';
 	
 
 	//realizo la consulta
