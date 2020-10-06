@@ -12,7 +12,7 @@
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-	$cons = "'" . $_POST['pepe'] . "'";
+	$cons = "'" . $_POST['usuario'] . "'";
 
 	$parte1 = 'SELECT "nro_cuenta" 
   				FROM public."CUENTAS" 
