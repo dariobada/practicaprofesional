@@ -8,17 +8,26 @@
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	//-------------- ACA HARDCODEO EL ID DE USUARIO ----------------
-	$_POST['usuario'] = 1;
+	$_POST['usuario'] = 'pepe';
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-	//$cons = "'" . $_POST['consulta'] . "'";
+	$cons = "'" . $_POST['consulta'] . "'";
 
-	$parte1 = 'SELECT * FROM public."CUENTAS_USUARIOS" WHERE "id_usuario" = 1';
+	$parte1 = 'SELECT "nro_cuenta" 
+  				FROM public."CUENTAS" 
+			   WHERE "id_cuenta" IN (SELECT "id_cuenta"
+					     FROM public."CUENTAS_USUARIOS"
+					    WHERE "id_usuario" in (SELECT "id_usuario"
+											     FROM public."USUARIOS"
+											    WHERE "nombre_usuario" = ';
+
+	$parte2 = '))';
+
 	
 
 	//realizo la consulta
-	$resultado = pg_query($dbconn, $parte1 . $cons);
+	$resultado = pg_query($dbconn, $parte1 . $cons . $parte2);
 
 	if (!$resultado) {
 			echo "Ocurrió un error.\n";
@@ -126,7 +135,7 @@
 					
 					<?php
 						while ($fila = pg_fetch_assoc($resultado)) {
-  							echo $fila['id_cuenta'];
+  							echo $fila['nro_cuenta'];
 }
 					?>
 
