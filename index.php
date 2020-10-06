@@ -14,7 +14,7 @@
 
 	$cons = "'" . 'pepe' . "'";
 
-	$parte1 = 'SELECT "nro_cuenta" 
+	$parte1 = 'SELECT "nro_cuenta" , "tipo_cuenta", "cod_moneda", "saldo"
   				FROM public."CUENTAS" 
 			   WHERE "id_cuenta" IN (SELECT "id_cuenta"
 					     FROM public."CUENTAS_USUARIOS"
@@ -141,10 +141,18 @@
 						} else{
 							
 							echo '<table>';
-							echo '<tr><th>Número cuenta</th></tr>';
+							echo '<tr>';
+							echo '<th>Número cuenta</th>';
+							echo '<th>Tipo</th>';
+							echo '<th>Moneda</th>';
+							echo '<th>Saldo</th>';
+							echo '</tr>';
 							while ($fila = pg_fetch_assoc($resultado)) {
 								echo '<tr>';
   								echo '<td>' . $fila['nro_cuenta'] . '</td>';
+  								echo '<td>' . $fila['tipo_cuenta'] . '</td>';
+  								echo '<td>' . $fila['cod_moneda'] . '</td>';
+  								echo '<td>' . $fila['saldo'] . '</td>';
   								echo '</tr>';
 							}
 							echo '</table>';
