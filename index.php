@@ -29,6 +29,10 @@
 	//realizo la consulta
 	$resultado = pg_query($dbconn, $parte1 . $cons . $parte2);
 
+	echo '<script language="javascript">';
+	echo 'alert(' . $parte1 . $cons . $parte2 . ')';
+	echo '</script>';
+
 	if (!$resultado) {
 			echo "Ocurrió un error.\n";
 			exit;
