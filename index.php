@@ -29,9 +29,6 @@
 	//realizo la consulta
 	$resultado = pg_query($dbconn, $parte1 . $cons . $parte2);
 
-	echo '<script language="javascript">';
-	echo 'alert(' . $parte1 . $cons . $parte2 . ')';
-	echo '</script>';
 
 	if (!$resultado) {
 			echo "Ocurrió un error.\n";
@@ -138,9 +135,22 @@
 				<div class="interiorBody">
 					
 					<?php
-						while ($fila = pg_fetch_assoc($resultado)) {
-  							echo $fila['nro_cuenta'];
-}
+
+						if (pg_num_rows($resultado) == 0){
+							echo "No posee cuentas";
+						} else{
+							
+							echo '<tr><th>Número cuenta</th></tr>'
+							while ($fila = pg_fetch_assoc($resultado)) {
+								echo '<tr>';
+  								echo '<td>' . $fila['nro_cuenta'] . '</td>';
+  								echo '</tr>';
+							}
+
+
+						}
+
+						
 					?>
 
 				</div>
