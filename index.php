@@ -8,11 +8,11 @@
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	//-------------- ACA HARDCODEO EL ID DE USUARIO ----------------
-	$_POST['usuario'] = 'pepe';
+	//$_POST['usuario'] = 'pepe';
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-	$cons = "'" . $_POST['usuario'] . "'";
+	$cons = "'" . 'pepe' . "'";
 
 	$parte1 = 'SELECT "nro_cuenta" 
   				FROM public."CUENTAS" 
