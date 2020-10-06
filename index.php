@@ -140,7 +140,7 @@
 							echo "No posee cuentas";
 						} else{
 							
-							echo '<tr><th>Número cuenta</th></tr>'
+							echo '<tr><th>Número cuenta</th></tr>';
 							while ($fila = pg_fetch_assoc($resultado)) {
 								echo '<tr>';
   								echo '<td>' . $fila['nro_cuenta'] . '</td>';
