@@ -23,13 +23,13 @@
 
 			$fila = pg_fetch_assoc($resultado);
 
-			if (!$fila['pass'] == sha1($_POST['pass'])){
+			if ($fila['pass'] != sha1($_POST['pass'])){
 
 				echo "Usuario o contraseña incorrecta";
 				exit();
 			}
 
-			if (!$fila['cod_estado'] == 'A'){
+			if ($fila['cod_estado'] != 'A'){
 
 				echo "El usuario no se encuentra activo";
 				exit();
