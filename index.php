@@ -9,7 +9,7 @@
 
 	//validar el usuario 
 	$cons = "'" . $_POST['usuario'] . "'";
-	$parte1 = 'SELECT * FROM public."USUARIOS" WHERE "nombre_usuarios" = ';
+	$parte1 = 'SELECT * FROM public."USUARIOS" WHERE "nombre_usuario" = ';
 	
 	//realizo la consulta
 	$resultado = pg_query($dbconn, $parte1 . $cons);
