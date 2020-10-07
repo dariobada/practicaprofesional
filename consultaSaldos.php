@@ -20,7 +20,7 @@
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-	$cons = "'" . 'pepe' . "'";
+	$cons = "'" . $_SESSION['usuario'] . "'";
 
 	$parte1 = 'SELECT "nro_cuenta" , "tipo_cuenta", "cod_moneda", "saldo"
   				FROM public."CUENTAS" 
