@@ -1,5 +1,7 @@
 <?php
 	
+	session_start();
+
 	if(count($_POST) > 0){
 
 	include 'datosConexionBase.inc';
@@ -36,7 +38,10 @@
 
 			}
 
-			echo "Usuario correcto";
+			$_SESSION['logueado'] = true;
+			$_SESSION['usuario'] = $_POST['usuario'];
+			header("Location: consultaSaldos.php");
+			exit;
 
 		}else{
 
