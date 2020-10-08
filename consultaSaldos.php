@@ -49,6 +49,7 @@
 ?>
 
 
+
 <!DOCTYPE html>
 
 <html>
@@ -71,49 +72,48 @@
 			div.contenedorPrincipal{
 				height:100%;
 				width:100%;
-				background-color:red;
+			
 			}
 
 			div.menuSuperior{
 				width:100%;
-				height:15%;
+				height:10%;
 				float:left;
 
 			}	
 		
 			div.headerOpcionImpar{
-				background-color:darkblue;
+				background-color:rgb(47, 92, 215);
 				height:100%;
 				width:20%;
+				font-family: Helvetica;
 				float:left;
 				color:white;
 				font-size:25px;
-				font-weight:bold;
+				font-weight: bold;
 				justify-content:center;
 				align-items:center;
 				display:flex;
+			
 			}	
 
 			div.headerOpcionPar{
-				background-color:lightblue;
+				background-color:rgb(74, 112, 215);
 				width:20%;
 				height:100%;
 				float:left;
 				color:white;
+				font-family: Helvetica;
 				font-size:25px;
 				font-weight:bold;
 				justify-content:center;
 				align-items:center;
 				display:flex;
+	
 			}
 
 			div.contenedorBody{
 				height:100%;
-				background-color:salmon;
-
-
-
-
 			}
 
 			div.interiorBody{
@@ -122,18 +122,22 @@
 				height:50%;
 				left:25%;
 				position:absolute;
-				top:35%;
+				top:30%;
 
 
+			}
+			img{
+				height: 40px;
+				width: 260px;
 			}
 			
 		</style>
 	</head>
 
-	<body>
-		<div class="contenedorPrincipal">
+	<body background="fondo.jpg">
+		<div class="contenedorPrincipal" >
 			<div class="menuSuperior">
-				<div class="headerOpcionImpar">Logo</div>
+				<div class="headerOpcionImpar"><img src="logo.png"></div>
 				<div class="headerOpcionPar">Consulta de saldos</div>
 				<div class="headerOpcionImpar">Tarjetas</div>
 				<div class="headerOpcionPar">Transferencias</div>
