@@ -177,13 +177,11 @@
 
 	<script src="./jquery.js"></script>
 	<script type="text/javascript">
-
-			alert("aca");
+			
 			$(document).ready(function(){
-				alert("entra");
+				
 				$("#divCerrarSesion").click(function(){
-
-					alert("entra2");
+					
 					$.ajax({
 						type:"post",
 						url:"./cerrarSesion.php",
