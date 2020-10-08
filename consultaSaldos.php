@@ -137,7 +137,7 @@
 				<div class="headerOpcionPar">Consulta de saldos</div>
 				<div class="headerOpcionImpar">Tarjetas</div>
 				<div class="headerOpcionPar">Transferencias</div>
-				<div class="headerOpcionImpar">Cerrar sesión</div>
+				<div class="headerOpcionImpar" id="divCerrarSesion">Cerrar sesión</div>
 			</div>
 			<div class="contenedorBody">
 				<div class="interiorBody">
@@ -174,7 +174,31 @@
 				</div>
 			</div>
 		</div>
-	
+
+	<script src="./jquery.js"></script>
+	<script type="text/javascript">
+
+			alert("aca");
+			$(document).ready(function(){
+				alert("entra");
+				$("#divCerrarSesion").click(function(){
+
+					alert("entra2");
+					$.ajax({
+						type:"post",
+						url:"./cerrarSesion.php",
+						data:{},
+						success:function(respuestaDelServer,estado){
+							
+						}
+					});
+
+
+
+				});
+			});
+		</script>
+
 				
 	</body>
 </html>
