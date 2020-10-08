@@ -89,7 +89,7 @@
 				font-family: Helvetica;
 				float:left;
 				color:white;
-				font-size:25px;
+				font-size:120%;
 				font-weight: bold;
 				justify-content:center;
 				align-items:center;
@@ -104,7 +104,7 @@
 				float:left;
 				color:white;
 				font-family: Helvetica;
-				font-size:25px;
+				font-size:120%;
 				font-weight:bold;
 				justify-content:center;
 				align-items:center;
@@ -117,18 +117,18 @@
 			}
 
 			div.interiorBody{
-				background-color:white;
-				width:50%;
-				height:50%;
-				left:25%;
+				background-color:lightblue;
+				width:60%;
+				height:55%;
+				left:20%;
 				position:absolute;
 				top:30%;
 
 
 			}
 			img{
-				height: 40px;
-				width: 260px;
+				height: 50%;
+				width: 80%;
 			}
 			
 		</style>
