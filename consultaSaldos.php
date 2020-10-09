@@ -143,6 +143,28 @@
 			[campo-dato='c4']{
 			width:25%; 
 			}
+
+			#cuentas{
+				border-collapse: collapse;
+  				width: 100%;
+			}
+
+			#cuentas td, #cuentas th{
+				border: 1px solid #ddd;
+			}
+
+			#cuentas tr:nth-child(even){background-color: #f2f2f2;}
+
+			#cuentas tr:hover {background-color: #ddd;}
+
+			#cuentas th {
+			  padding-top: 12px;
+			  padding-bottom: 12px;
+			  text-align: left;
+			  background-color: #4CAF50;
+			  color: white;
+			}
+
 			
 		</style>
 	</head>
@@ -165,7 +187,7 @@
 							echo "No posee cuentas";
 						} else{
 							
-							echo '<table>';
+							echo '<table id="cuentas">';
 							echo '<tr>';
 							echo '<th campo-dato="c1">Número cuenta</th>';
 							echo '<th campo-dato="c2">Tipo</th>';
