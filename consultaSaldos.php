@@ -182,6 +182,23 @@
 	<script src="./jquery.js"></script>
 	<script type="text/javascript">
 			
+			document.getElementById("divConsultaSaldos").onmouseover = function(){			
+				document.getElementById("divConsultaSaldos").style.cursor = "pointer";
+			}
+
+			document.getElementById("divConsultaSaldos").onmouseout = function(){			
+				document.getElementById("divConsultaSaldos").style.cursor = "auto";
+			}
+
+
+			document.getElementById("divCerrarSesion").onmouseover = function(){			
+				document.getElementById("divCerrarSesion").style.cursor = "pointer";
+			}
+
+			document.getElementById("divCerrarSesion").onmouseout = function(){			
+				document.getElementById("divCerrarSesion").style.cursor = "auto";
+			}
+
 			$(document).ready(function(){
 				
 				$("#divConsultaSaldos").click(function(){
