@@ -130,6 +130,19 @@
 				height: 50%;
 				width: 80%;
 			}
+
+			[campo-dato='c1']{
+			width:25%; 
+			}
+			[campo-dato='c2']{
+			width:25%; 
+			}
+			[campo-dato='c3']{
+			width:25%; 
+			}
+			[campo-dato='c4']{
+			width:25%; 
+			}
 			
 		</style>
 	</head>
@@ -154,17 +167,17 @@
 							
 							echo '<table>';
 							echo '<tr>';
-							echo '<th>Número cuenta</th>';
-							echo '<th>Tipo</th>';
-							echo '<th>Moneda</th>';
-							echo '<th>Saldo</th>';
+							echo '<th campo-dato="c1">Número cuenta</th>';
+							echo '<th campo-dato="c2">Tipo</th>';
+							echo '<th campo-dato="c3">Moneda</th>';
+							echo '<th campo-dato="c4">Saldo</th>';
 							echo '</tr>';
 							while ($fila = pg_fetch_assoc($resultado)) {
 								echo '<tr>';
-  								echo '<td>' . $fila['nro_cuenta'] . '</td>';
-  								echo '<td>' . $fila['tipo_cuenta'] . '</td>';
-  								echo '<td>' . $fila['cod_moneda'] . '</td>';
-  								echo '<td>' . $fila['saldo'] . '</td>';
+  								echo '<td campo-dato="c1">' . $fila['nro_cuenta'] . '</td>';
+  								echo '<td campo-dato="c2">' . $fila['tipo_cuenta'] . '</td>';
+  								echo '<td campo-dato="c3">' . $fila['cod_moneda'] . '</td>';
+  								echo '<td campo-dato="c4">' . $fila['saldo'] . '</td>';
   								echo '</tr>';
 							}
 							echo '</table>';
