@@ -138,7 +138,7 @@
 		<div class="contenedorPrincipal" >
 			<div class="menuSuperior">
 				<div class="headerOpcionImpar"><img src="logo.png"></div>
-				<div class="headerOpcionPar">Consulta de saldos</div>
+				<div class="headerOpcionPar" id="divConsultaSaldos">Consulta de saldos</div>
 				<div class="headerOpcionImpar">Tarjetas</div>
 				<div class="headerOpcionPar">Transferencias</div>
 				<div class="headerOpcionImpar" id="divCerrarSesion">Cerrar sesión</div>
@@ -184,6 +184,12 @@
 			
 			$(document).ready(function(){
 				
+				$("#divConsultaSaldos").click(function(){
+					
+					window.location.href="consultaSaldos.php";
+
+				});
+
 				$("#divCerrarSesion").click(function(){
 					
 					$.ajax({
@@ -191,7 +197,7 @@
 						url:"./cerrarSesion.php",
 						data:{},
 						success:function(respuestaDelServer,estado){
-							
+							window.location.href="index.php";	
 						}
 					});
 
